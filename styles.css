@@ -1,4 +1,4 @@
-/* Google Font already linked in HTML */
+/* Base styles */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f0f4f8;
@@ -7,13 +7,14 @@ body {
   color: #333;
 }
 
+/* Main container */
 .container {
   max-width: 700px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 30px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .form-header {
@@ -49,12 +50,12 @@ input[type="number"],
 select,
 textarea {
   width: 100%;
-  padding: 10px 14px;
+  padding: 12px 14px;
   font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -69,6 +70,7 @@ textarea:focus {
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 8px;
+  transform: scale(1.2);
 }
 
 textarea {
@@ -79,21 +81,60 @@ button[type="submit"] {
   background-color: #1e88e5;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 24px;
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
+  width: 100%;
 }
 
 button[type="submit"]:hover {
   background-color: #1565c0;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .container {
     margin: 20px;
     padding: 20px;
+  }
+
+  #title {
+    font-size: 24px;
+  }
+
+  #description {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+
+  label,
+  legend {
+    font-size: 14px;
+  }
+
+  #title {
+    font-size: 20px;
+  }
+
+  #description {
+    font-size: 13px;
   }
 }
