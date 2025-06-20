@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Placement Survey</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="form-header">
+      <h1 id="title">🎓 Student Placement Survey</h1>
+      <p id="description">Please help us understand your current placement status.</p>
+    </header>
+
+    <form id="survey-form" action="https://formspree.io/f/xqabdprp" method="POST">
+      <input type="hidden" name="_redirect" value="https://arunkambrekar.github.io/Survey-form/thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label id="number-label" for="number">Age</label>
+        <input type="number" id="number" name="age" min="18" max="30" placeholder="Enter your age" required>
+      </div>
+
+      <!-- Are you currently in 8th semester? -->
+      <div class="form-group">
+        <label>Are you currently in 8th Semester?</label>
+        <select name="sem_status" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+      <!-- Placement Status -->
+      <fieldset class="form-group">
+        <legend>Have you been placed?</legend>
+        <label><input type="radio" name="placement_status" value="placed" required> Placed</label>
+        <label><input type="radio" name="placement_status" value="not_placed"> Not Placed</label>
+      </fieldset>
+
+      <!-- Type of offer -->
+      <div class="form-group">
+        <label>What type of offer have you received?</label>
+        <select name="offer_type">
+          <option value="" disabled selected>Select if applicable</option>
+          <option value="internship">Internship</option>
+          <option value="fulltime">Full-Time Job</option>
+          <option value="both">Both</option>
+          <option value="not_applicable">Not Applicable</option>
+        </select>
+      </div>
+
+      <!-- Company Name -->
+      <div class="form-group">
+        <label for="company">Company Name (if placed)</label>
+        <input type="text" id="company" name="company" placeholder="E.g., Infosys, TCS, etc.">
+      </div>
+
+      <!-- Comments -->
+      <div class="form-group">
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="5" placeholder="Share your thoughts..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group">
+        <button type="submit" id="submit">Submit Survey</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
